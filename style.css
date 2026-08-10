@@ -1,0 +1,1746 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #e50914;
+    --red2: #ff3340;
+    --black: #050505;
+    --card: #101010;
+    --line: rgba(255,255,255,.08);
+    --text: #fff;
+    --muted: #8e8e8e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 78px;
+
+    color: var(--text);
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(229,9,20,.22),
+            transparent 35%
+        ),
+        #050505;
+
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: rgba(5,5,5,.94);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.brand-logo {
+    width: 37px;
+    height: 37px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            #710007
+        );
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow:
+        0 0 18px rgba(229,9,20,.3);
+}
+
+.brand h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.brand span {
+    display: block;
+    margin-top: 2px;
+
+    color: var(--red);
+
+    font-size: 7px;
+    letter-spacing: 1.5px;
+}
+
+.menu-btn {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+
+    color: #fff;
+    background: #111;
+
+    font-size: 13px;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    padding: 34px 15px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    padding-top: 43px;
+    padding-bottom: 25px;
+}
+
+.small-title {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--red);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 35px;
+    line-height: 1;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 14px;
+}
+
+.hero h2 span {
+    color: var(--red);
+
+    text-shadow:
+        0 0 20px rgba(229,9,20,.4);
+}
+
+.hero p {
+    max-width: 340px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* ================= HERO BUTTON ================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.hero-buttons button {
+    flex: 1;
+
+    min-height: 38px;
+
+    border: 1px solid rgba(229,9,20,.35);
+    border-radius: 10px;
+
+    color: #fff;
+    background: rgba(229,9,20,.09);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.hero-buttons button:first-child {
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            #970009
+        );
+
+    border: none;
+}
+
+.hero-buttons i {
+    margin-right: 5px;
+}
+
+/* ================= STATS ================= */
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 7px;
+
+    margin-top: 20px;
+}
+
+.hero-stats div {
+    padding: 11px 5px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.035);
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.hero-stats strong {
+    display: block;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+}
+
+.hero-stats span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #666;
+
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+/* ================= BANNER ================= */
+
+.banner-section {
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.banner-slider {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(229,9,20,.25);
+
+    box-shadow:
+        0 0 25px rgba(229,9,20,.12);
+}
+
+.banner-track {
+    display: flex;
+
+    width: 100%;
+
+    transition:
+        transform .7s cubic-bezier(.65,0,.35,1);
+}
+
+.banner-slide {
+    min-width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+}
+
+.banner-slide img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.banner-dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    margin-top: 9px;
+}
+
+.banner-dots span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #444;
+
+    transition: .3s;
+}
+
+.banner-dots span.active {
+    width: 16px;
+
+    border-radius: 5px;
+
+    background: var(--red);
+
+    box-shadow:
+        0 0 8px rgba(229,9,20,.5);
+}
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+    margin-bottom: 17px;
+}
+
+.section-heading span {
+    display: block;
+
+    color: var(--red);
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h3 {
+    margin-top: 5px;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 20px;
+}
+
+/* ================= FEATURE ================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 8px;
+}
+
+.feature-card {
+    padding: 14px 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0c0c0c
+        );
+
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.feature-card i {
+    color: var(--red);
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.feature-card h4 {
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+.feature-card p {
+    color: #777;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+}
+
+/* ================= PRODUCT ================= */
+
+.products-section {
+    padding-top: 35px;
+}
+
+.product-card {
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    padding: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0c0c0c
+        );
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+
+    transition: .25s ease;
+}
+
+.product-card:active {
+    transform: scale(.985);
+}
+
+.product-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.product-top img {
+    flex-shrink: 0;
+
+    width: 52px;
+    height: 52px;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.35);
+}
+
+.product-info {
+    min-width: 0;
+}
+
+.product-info span {
+    display: block;
+
+    color: var(--red);
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 6px;
+    letter-spacing: 1px;
+
+    margin-bottom: 3px;
+}
+
+.product-info h4 {
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.product-info p {
+    color: #707070;
+
+    font-size: 8px;
+}
+
+/* ================= PACKAGE ================= */
+
+.package-title {
+    margin-top: 13px;
+    margin-bottom: 7px;
+
+    color: #666;
+
+    font-size: 7px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.package-buttons {
+    display: flex;
+
+    gap: 6px;
+}
+
+.package {
+    flex: 1;
+
+    min-width: 0;
+
+    min-height: 39px;
+
+    padding: 6px 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 8px;
+
+    color: #aaa;
+
+    background: #0d0d0d;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.package strong {
+    font-size: 8px;
+}
+
+.package small {
+    margin-top: 2px;
+
+    color: #666;
+
+    font-size: 7px;
+}
+
+.package.active {
+    color: #fff;
+
+    border-color: var(--red);
+
+    background:
+        rgba(229,9,20,.1);
+
+    box-shadow:
+        inset 0 0 12px rgba(229,9,20,.06);
+}
+
+.package.active small {
+    color: var(--red);
+}
+
+/* ================= ORDER ================= */
+
+.order-btn {
+    width: 100%;
+
+    min-height: 38px;
+
+    margin-top: 9px;
+
+    border: 0;
+    border-radius: 9px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            #970009
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(229,9,20,.15);
+}
+
+.order-btn i {
+    margin-right: 6px;
+}
+
+/* ================= PAYMENT ================= */
+
+.payment-card {
+    padding: 15px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0b0b0b
+        );
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+}
+
+.payment-card img {
+    display: block;
+
+    width: min(210px,75vw);
+    aspect-ratio: 1/1;
+
+    object-fit: contain;
+
+    margin: 0 auto 13px;
+
+    padding: 7px;
+
+    background: #fff;
+
+    border-radius: 12px;
+}
+
+.payment-card h4 {
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.payment-card p {
+    color: #777;
+
+    font-size: 9px;
+
+    margin-bottom: 12px;
+}
+
+.payment-btn {
+    width: 100%;
+
+    min-height: 38px;
+
+    border: 1px solid rgba(229,9,20,.35);
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    background: rgba(229,9,20,.08);
+
+    font-size: 9px;
+}
+
+/* ================= REVIEW ================= */
+
+.review-card {
+    padding: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0b0b0b
+        );
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+}
+
+.stars {
+    color: #ffc400;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 9px;
+}
+
+.review-card p {
+    color: #aaa;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 10px;
+}
+
+.review-card strong {
+    color: #fff;
+
+    font-size: 9px;
+}
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 9999;
+
+    height: 66px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    padding:
+        7px 7px
+        calc(7px + env(safe-area-inset-bottom));
+
+    background:
+        rgba(8,8,8,.96);
+
+    backdrop-filter: blur(18px);
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 -10px 30px rgba(0,0,0,.35);
+}
+
+.nav-item {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    border: 0;
+
+    color: #666;
+
+    background: transparent;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 7px;
+}
+
+.nav-item i {
+    font-size: 15px;
+
+    transition: .2s;
+}
+
+.nav-item.active {
+    color: #fff;
+}
+
+.nav-item.active i {
+    color: var(--red);
+
+    transform: translateY(-1px);
+
+    filter:
+        drop-shadow(
+            0 0 6px
+            rgba(229,9,20,.6)
+        );
+}
+
+.nav-item.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 18px;
+    height: 2px;
+
+    border-radius: 3px;
+
+    background: var(--red);
+}
+
+/* ================= SMALL SCREEN ================= */
+
+@media (max-width: 350px) {
+
+    .hero h2 {
+        font-size: 31px;
+    }
+
+    .product-top img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .product-info h4 {
+        font-size: 12px;
+    }
+
+    .package strong {
+        font-size: 7px;
+    }
+
+    .package small {
+        font-size: 6px;
+    }
+
+}
+
+/* ================= HIDE DESKTOP ================= */
+
+@media (min-width: 651px) {
+
+    body {
+        width: 430px;
+        min-height: 100vh;
+
+        margin: 0 auto;
+
+        border-left: 1px solid #151515;
+        border-right: 1px solid #151515;
+
+        box-shadow:
+            0 0 80px rgba(0,0,0,.5);
+    }
+
+    .top-header {
+        width: 430px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bottom-nav {
+        width: 430px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================================
+   CHECKOUT & PAYMENT POPUP
+========================================= */
+
+.order-overlay,
+.payment-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(14px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: all 0.25s ease;
+}
+
+.order-overlay.show,
+.payment-overlay.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* BOX */
+
+.order-box,
+.payment-box-new {
+    position: relative;
+
+    width: 100%;
+    max-width: 380px;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #090909
+        );
+
+    border: 1px solid rgba(229, 9, 20, 0.28);
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.7),
+        0 0 30px rgba(229,9,20,.08);
+
+    transform: translateY(20px) scale(.96);
+
+    transition: .3s ease;
+}
+
+.order-overlay.show .order-box,
+.payment-overlay.show .payment-box-new {
+    transform: translateY(0) scale(1);
+}
+
+
+/* CLOSE */
+
+.order-close,
+.payment-close {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+
+    color: #aaa;
+    background: #111;
+
+    font-size: 12px;
+}
+
+
+/* ICON */
+
+.checkout-icon {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 13px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f20b19,
+            #850008
+        );
+
+    box-shadow:
+        0 0 20px rgba(229,9,20,.3);
+}
+
+
+/* LABEL */
+
+.checkout-label {
+    display: block;
+
+    color: #e50914;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* TITLE */
+
+.order-box h2,
+.payment-box-new h2 {
+    margin-top: 5px;
+    margin-bottom: 17px;
+
+    color: #fff;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 20px;
+}
+
+
+/* ORDER DETAILS */
+
+.order-details {
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.02);
+}
+
+.order-details > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px;
+
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.order-details > div:last-child {
+    border-bottom: 0;
+}
+
+.order-details span {
+    color: #666;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.order-details strong {
+    color: #fff;
+
+    font-size: 10px;
+
+    text-align: right;
+}
+
+.order-details .order-total {
+    background: rgba(229,9,20,.07);
+}
+
+.order-total strong {
+    color: #ff2633;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 15px;
+}
+
+
+/* NOTE */
+
+.order-note,
+.payment-note-new {
+    display: flex;
+
+    gap: 9px;
+
+    margin: 12px 0;
+
+    padding: 11px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.035);
+}
+
+.order-note i,
+.payment-note-new i {
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    color: #e50914;
+
+    font-size: 12px;
+}
+
+.order-note p,
+.payment-note-new p {
+    color: #777;
+
+    font-size: 8px;
+
+    line-height: 1.6;
+}
+
+
+/* PAY BUTTON */
+
+.pay-now {
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 0;
+    border-radius: 10px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #8d0008
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px rgba(229,9,20,.15);
+}
+
+
+/* PAYMENT PRODUCT */
+
+.payment-product-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-bottom: 12px;
+
+    font-size: 9px;
+}
+
+.payment-product-name strong {
+    color: #fff;
+}
+
+.payment-product-name span {
+    color: #e50914;
+}
+
+
+/* QR */
+
+.payment-qr {
+    width: min(220px, 70vw);
+    aspect-ratio: 1 / 1;
+
+    margin: 0 auto 13px;
+
+    padding: 7px;
+
+    background: #fff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
+}
+
+.payment-qr img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+
+/* TOTAL PAYMENT */
+
+.payment-price {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 11px 12px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.025);
+}
+
+.payment-price span {
+    color: #666;
+
+    font-size: 8px;
+}
+
+.payment-price strong {
+    color: #e50914;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 15px;
+}
+
+
+/* WHATSAPP */
+
+.send-whatsapp {
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 10px;
+
+    color: #fff;
+
+    background: #128c45;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 20px rgba(18,140,69,.15);
+}
+
+.send-whatsapp:active {
+    transform: scale(.98);
+}
+
+
+/* =========================================
+   MOBILE TWEAK
+========================================= */
+
+@media (max-width: 350px) {
+
+    .order-box,
+    .payment-box-new {
+        padding: 16px;
+    }
+
+    .payment-qr {
+        width: 190px;
+    }
+
+}
+
+<!-- =====================================================
+     GODFATHER ADD-ON : CUSTOMER REVIEWS
+===================================================== -->
+
+<style>
+
+.reviews-section {
+    padding: 25px 15px 110px;
+}
+
+.reviews-head {
+    margin-bottom: 14px;
+}
+
+.reviews-head span {
+    color: #e50914;
+    font-family: "Orbitron", sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+}
+
+.reviews-head h3 {
+    margin-top: 5px;
+    color: #fff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+}
+
+.review-rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 13px;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 13px;
+    background: linear-gradient(145deg,#151515,#0b0b0b);
+}
+
+.rating-number {
+    color: #fff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 22px;
+}
+
+.rating-stars {
+    color: #ffc107;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.rating-summary-text {
+    color: #666;
+    font-size: 8px;
+    margin-top: 3px;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.review-card {
+    padding: 13px;
+
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 13px;
+
+    background:
+        linear-gradient(145deg,#151515,#0b0b0b);
+
+    transition: .25s ease;
+}
+
+.review-card:hover {
+    border-color: rgba(229,9,20,.2);
+    transform: translateY(-2px);
+}
+
+.review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reviewer-avatar {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: #fff;
+    background: linear-gradient(135deg,#e50914,#550006);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+}
+
+.reviewer-name {
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.review-date {
+    color: #555;
+    font-size: 7px;
+    margin-top: 2px;
+}
+
+.review-stars {
+    color: #ffc107;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.review-stars .empty {
+    color: #3a3a3a;
+}
+
+.review-text {
+    margin-top: 9px;
+
+    color: #858585;
+
+    font-size: 8px;
+    line-height: 1.65;
+}
+
+.review-product {
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 4px 7px;
+
+    border-radius: 6px;
+
+    color: #e50914;
+    background: rgba(229,9,20,.07);
+
+    font-size: 7px;
+}
+
+</style>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const main = document.querySelector("main");
+
+    if (!main) return;
+
+    const reviews = document.createElement("section");
+
+    reviews.className = "reviews-section";
+    reviews.id = "reviews";
+
+    reviews.innerHTML = `
+
+        <div class="reviews-head">
+
+            <span>CUSTOMER FEEDBACK</span>
+
+            <h3>Customer Reviews</h3>
+
+        </div>
+
+
+        <div class="review-rating-summary">
+
+            <div class="rating-number">
+                4.8
+            </div>
+
+            <div>
+
+                <div class="rating-stars">
+                    ★ ★ ★ ★ ★
+                </div>
+
+                <div class="rating-summary-text">
+                    Berdasarkan customer reviews
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="review-list">
+
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <div class="reviewer-name">
+                                Ahmad
+                            </div>
+
+                            <div class="review-date">
+                                Baru saja
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Proses cepat dan admin responsive.
+                    Harga juga sesuai dengan yang tertera.
+                </p>
+
+                <span class="review-product">
+                    Spotify Premium
+                </span>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            R
+                        </div>
+
+                        <div>
+
+                            <div class="reviewer-name">
+                                Rizky
+                            </div>
+
+                            <div class="review-date">
+                                1 hari lalu
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★<span class="empty">★</span>
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Overall bagus. Respon admin lumayan
+                    cepat dan prosesnya mudah.
+                </p>
+
+                <span class="review-product">
+                    CapCut Pro
+                </span>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            F
+                        </div>
+
+                        <div>
+
+                            <div class="reviewer-name">
+                                Farhan
+                            </div>
+
+                            <div class="review-date">
+                                2 hari lalu
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Order pertama langsung puas.
+                    Website juga gampang digunakan.
+                </p>
+
+                <span class="review-product">
+                    YouTube Premium
+                </span>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            D
+                        </div>
+
+                        <div>
+
+                            <div class="reviewer-name">
+                                Danish
+                            </div>
+
+                            <div class="review-date">
+                                3 hari lalu
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★<span class="empty">★</span>
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Harga murah dan pembelian cukup
+                    simple. Bakal order lagi.
+                </p>
+
+                <span class="review-product">
+                    Alight Motion
+                </span>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            M
+                        </div>
+
+                        <div>
+
+                            <div class="reviewer-name">
+                                Muhammad
+                            </div>
+
+                            <div class="review-date">
+                                4 hari lalu
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Mantap, admin ramah dan transaksi
+                    berjalan dengan lancar.
+                </p>
+
+                <span class="review-product">
+                    Meitu VIP
+                </span>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    <div class="reviewer">
+
+                        <div class="reviewer-avatar">
+                            N
+                        </div>
+
+                        <div>
+
+                            <div class="reviewer-name">
+                                Naufal
+                            </div>
+
+                            <div class="review-date">
+                                5 hari lalu
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★<span class="empty">★</span>
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Packaging digitalnya rapi dan
+                    cara ordernya gampang dipahami.
+                </p>
+
+                <span class="review-product">
+                    Wink Private
+                </span>
+
+            </div>
+
+
+        </div>
+
+    `;
+
+    main.appendChild(reviews);
+
+});
+
+</script>
